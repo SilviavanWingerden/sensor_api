@@ -68,7 +68,7 @@ class DefaultController extends Controller
 
         $response = new Response($json);
 
-        $response->headers->set('Content-Type', 'text/xml');
+        $response->headers->set('Content-Type', 'text/json');
         $response->headers->set('Access-Control-Allow-Origin', '*');
 
         return $response;
@@ -136,7 +136,7 @@ class DefaultController extends Controller
 
         $response = new Response($json);
 
-        $response->headers->set('Content-Type', 'text/xml');
+        $response->headers->set('Content-Type', 'text/json');
         $response->headers->set('Access-Control-Allow-Origin', '*');
 
         return $response;
