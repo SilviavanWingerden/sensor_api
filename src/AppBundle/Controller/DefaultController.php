@@ -59,12 +59,12 @@ class DefaultController extends Controller
             ->getRepository('AppBundle:Pressure')
             ->find($id);
 
-            $json = array(
-                'id'=>$item->getId(),
-                'value' => $item->getValue()
-            );
+//            $json = array(
+//                'id'=>$item->getId(),
+//                'value' => $item->getValue()
+//            );
 
-        $json = json_encode($json);
+        $json = json_encode($item->getValue());
 
         $response = new Response($json);
 
@@ -123,16 +123,15 @@ class DefaultController extends Controller
             ->getRepository('AppBundle:Ultrasonic')
             ->find($id);
 
-        $json = array(
-            'id'=>$item->getId(),
-            'value' => $item->getValue()
-        );
+//        $json = array(
+//            'id'=>$item->getId(),
+//            'value' => $item->getValue()
+//        );
 
 //        $json = json_encode($json);
 
 //        return new Response($json);
-
-        $json = json_encode($json);
+        $json = json_encode($item->getValue());
 
         $response = new Response($json);
 
